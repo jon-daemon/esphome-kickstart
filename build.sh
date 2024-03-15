@@ -41,7 +41,7 @@ for config in "${selected[@]}"; do
     else
         cp .esphome/build/kickstart-${config}/.pioenvs/kickstart-${config}/firmware.uf2 ../build/kickstart-${config}.uf2
 
-        if [ $config = "esp8266" ] || [ $config = "esp32" ]; then
+        if [ $config = "bk7231n" ] || [ $config = "bk7231t" ]; then
 	        cp .esphome/build/kickstart-${config}/.pioenvs/kickstart-${config}/*.ota.rbl ../build/ || true
 	        cp .esphome/build/kickstart-${config}/.pioenvs/kickstart-${config}/*.ota.ug.bin ../build/ || true
 	        cp .esphome/build/kickstart-bk7231t/.pioenvs/kickstart-bk7231t/*.ota.rbl ../build/OpenBK7231T_OTA_upgrade_to_esphome_$1.rbl || true
